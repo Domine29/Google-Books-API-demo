@@ -10,7 +10,7 @@ load_dotenv()
 api_key = os.environ['api_key']
 
 def get_books():
-    query = input("Enter search term for 5 books: \n >> ")
+    query = input("Enter search term for 5 books: \n\n >> ")
     params = {
         "q": query,
         "filter": "full",
@@ -42,4 +42,3 @@ def get_books():
         selection.append({"author":author, "title": title, "publisher": publisher})
 
     return selection
-
