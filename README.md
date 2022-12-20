@@ -1,7 +1,5 @@
 # Google-Books-API-demo
-
-## Overall Structure
-  - The Command Line Interface (CLI) will have three options displayed
+  - The Command Line Interface (CLI) will have three options displayed...
     - Search
       - User inputs search query then Google Books API retrieves 5 books matching query and displays it to the user
       - User selects a book from the list and saves it to the "Reading List"
