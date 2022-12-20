@@ -2,11 +2,12 @@
 
 ## Overall Structure
   - The Command Line Interface (CLI) will have three options displayed
-    1. Search
+    - Search
       - User inputs search query then Google Books API retrieves 5 books matching query and displays it to the user
       - User selects a book from the list and saves it to the "Reading List"
-    2. Reading List
+    - Reading List
       - User will be able to see a list of books they have saved. 
+    - Exit
 
 ## Approach
   - Render interface
