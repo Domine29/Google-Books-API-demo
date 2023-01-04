@@ -8,11 +8,12 @@ def select_book(book):
 def display_books(selection):
 
     for i, book in enumerate(selection, start=1):
-        author = book['author']
+        author = ", ".join(book['author']) if isinstance(book['author'], list) else book['author']
+        
         title = book['title']
         publisher = book['publisher']
         
-        print(f'{i}. Author: {author} || Title: {title} || Publisher: {publisher}')
+        print(f'{i}. Author(s): {author} || Title: {title} || Publisher: {publisher}')
 
     return ''
 
@@ -37,27 +38,27 @@ def book_interface():
 
         if mode == '1':
             select_book(selection[0])
-            print(f"{selection[0]['title']} has been saved ")
+            print(f"\n{selection[0]['title']} has been saved ")
             return False
 
         elif mode == '2':
             select_book(selection[1])
-            print(f"{selection[1]['title']} has been saved ")
+            print(f"\n{selection[1]['title']} has been saved ")
             return False
 
         if mode == '3':
             select_book(selection[2])
-            print(f"{selection[2]['title']} has been saved ")
+            print(f"\n{selection[2]['title']} has been saved ")
             return False
 
         elif mode == '4':
             select_book(selection[3])
-            print(f"{selection[3]['title']} has been saved ")
+            print(f"\n{selection[3]['title']} has been saved ")
             return False
 
         elif mode == '5':
             select_book(selection[4])
-            print(f"{selection[4]['title']} has been saved ")
+            print(f"\n{selection[4]['title']} has been saved ")
             return False
 
         elif mode == '6':

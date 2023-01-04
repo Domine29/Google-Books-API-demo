@@ -6,14 +6,14 @@ import requests
 url = 'https://www.googleapis.com/books/v1/volumes'
 
 # API Key
-# load_dotenv()
-# api_key = os.environ['api_key']
+load_dotenv()
+api_key = os.environ['api_key']
 
 def get_books():
     query = input("Enter search term for 5 books: \n\n >> ")
     params = {
         "q": query,
-        # "key": api_key,
+        "key": api_key,
         "printType": "books",
         "max_results": '5'
 
@@ -32,7 +32,7 @@ def get_books():
 
     for book in books:
         try:
-            author = book['volumeInfo']['authors'][0]
+            author = book['volumeInfo']['authors']
         except: 
             author = "Data does not exist"
 
