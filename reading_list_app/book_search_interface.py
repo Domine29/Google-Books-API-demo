@@ -1,15 +1,20 @@
 from list_functions import *
-
-saved_list = []
+import json
 
 def select_book(book):
+    with open('./data/saved_list.json', 'r') as file:
+        saved_list = json.load(file)
+    
     saved_list.append(book)
+
+    with open('./data/saved_list.json', 'w') as file:
+        json.dump(saved_list, file)
 
 def display_books(selection):
 
     for i, book in enumerate(selection, start=1):
         author = ", ".join(book['author']) if isinstance(book['author'], list) else book['author']
-        
+
         title = book['title']
         publisher = book['publisher']
         
