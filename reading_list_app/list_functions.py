@@ -6,20 +6,24 @@ import requests
 url = 'https://www.googleapis.com/books/v1/volumes'
 
 # API Key
-load_dotenv()
-api_key = os.environ['api_key']
+# load_dotenv()
+# api_key = os.environ['api_key']
 
 def get_books():
     query = input("Enter search term for 5 books: \n\n >> ")
     params = {
         "q": query,
-        "filter": "full",
-        "key": api_key,
+        # "key": api_key,
+        "printType": "books",
         "max_results": '5'
 
     }
 
     response = requests.get(url, params=params)
+
+    if !response.json()['totalItems']:
+        
+    
     books = response.json()['items']
     selection = []
 

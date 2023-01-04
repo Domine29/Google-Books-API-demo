@@ -18,9 +18,10 @@ def display_books(selection):
 
 def book_interface():
     selection = get_books()
+    error_message = ''
 
     while True:
-        mode = input(str(display_books(selection)) + "6. Exit\n\nSave 1 book.\n\n >> ")
+        mode = input(str(display_books(selection)) + f"6. Go Back{error_message}\n\nSave 1 book.\n\n >> ")
 
         if mode == '1':
             select_book(selection[0])
@@ -44,3 +45,6 @@ def book_interface():
 
         elif mode == '6':
             break
+        
+        else:
+            error_message = "\n\nPlease choose one Book from 1-5 or 6 to go back"
