@@ -5,6 +5,8 @@ from saved_list_interface import *
 error_message = ''
 
 while True: 
+    print("\nHello There")
+
     mode = input(f"\n== Reading List ==\n1. Search Books\n2. Reading List\n3. Exit{error_message}\n\n>> ")
 
     if mode == '1':
@@ -16,6 +18,7 @@ while True:
         saved_list_interface(book_search_interface.saved_list)
 
     elif mode == '3':
+        print('\nGoodbye\n')
         break
 
     else:

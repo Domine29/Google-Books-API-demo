@@ -21,8 +21,11 @@ def get_books():
 
     response = requests.get(url, params=params)
 
-    if !response.json()['totalItems']:
-        
+    if response.status_code != 200:
+        return []
+
+    if not response.json()['totalItems']:
+        return []
     
     books = response.json()['items']
     selection = []
