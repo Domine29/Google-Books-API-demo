@@ -13,7 +13,7 @@ def get_books():
     query = input("Enter search term for 5 books: \n\n >> ")
     params = {
         "q": query,
-        "key": api_key,
+        # "key": api_key, (uncomment if you're using your own API key)
         "printType": "books",
         "max_results": '5'
 
