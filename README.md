@@ -14,7 +14,6 @@
       2. User can then select which one they want to save.
     - Saved List interface
       1. A user's saved books get displayed to view on the command line.
-  - <strike>When a user picks one book, using OOP, creates an instance of the class "Book" then saves it to a global variable that is an array of objects that can be iterated through and displayed.<strike>
   
 ## Set Up
   1. Create Virtual Environment ([Documentation](https://docs.python.org/3/library/venv.html) for more info)
