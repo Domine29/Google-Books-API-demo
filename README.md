@@ -31,7 +31,7 @@
     - If you do not want to share your API key with other users then create a ".gitingnore" file and include the ".env" in the ".gitignore". Anything included in the ".gitignore" will not be pushed up into your repo. 
     - In the "reading_list_app" folder, the "list_functions.py" contains all functionality for the Google Books API. Uncomment line 16 of the code which includes the "key" parameter.
 4. Run Application
-    - Under "reading_list_app" folder run the file "reading_list_interface" to interact with the application. 
+    - Under "reading_list_app" folder run ``` python reading_list_interface.py ``` to interact with the application.
     
 ## Functionality
 1. "reading_list_interface.py"
